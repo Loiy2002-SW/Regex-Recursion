@@ -2,8 +2,8 @@
 
 function division(number, dividedBy) {
     // Write you logic here.
-    if(dividedBy == 0)
-    return undefined;
+    if(dividedBy === 0)
+    return 0;
     if(number < dividedBy)
     return 0;
 
@@ -31,12 +31,14 @@ the next integer is determined by summing the previous two. This gives us:
 
 0, 1, 1, 2, 3, 5, 8, 13, ...
 
-Write a function that take n as parameter and return the nth element in the Fibonacci Series
+Write a function that take n as parameter and return the nth element in the Fibonacci Seriesno
 
 Example: n = 4 ==> 3, n= 0 ==> 0, n = 3 ==> 2 */
 
 function fibonacci(n) {
     // Write you logic here.
+    if(n < 0 || n == 0)
+    return 0;
     if(n == 0 || n == 1)
     return 1;
 
@@ -101,5 +103,5 @@ describe("Test permutations", () => {
     test("It should return a list of possible combinations", () => {
         expect(permutations(3, 3)).toStrictEqual(["123", "132", "213", "231", "312", "321"]);
         expect(permutations(3, 0)).toStrictEqual([]);
-    })
+    });
 });
